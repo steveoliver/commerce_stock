@@ -31,15 +31,15 @@ interface StockCheckInterface {
   public function getIsInStock($variation_id, array $locations);
 
   /**
-   * Check if product is always in stock.
+   * Check if entity is always in stock.
    *
-   * @param int $variation_id
-   *   The product variation ID.
+   * @param int $entity
+   *   The purchasable entity ID.
    *
    * @return bool
-   *    TRUE if the product is in stock, FALSE otherwise.
+   *    TRUE if the entity is always in stock, FALSE otherwise.
    */
-  public function getIsAlwaysInStock($variation_id);
+  public function getIsAlwaysInStock($entity);
 
   /**
    * Check if product is managed by stock.

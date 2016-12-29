@@ -30,7 +30,7 @@ class AlwaysInStock implements StockCheckInterface, StockUpdateInterface {
   /**
    * {@inheritdoc}
    */
-  public function getIsAlwaysInStock($variation_id) {
+  public function getIsAlwaysInStock($entity) {
     return TRUE;
   }
 

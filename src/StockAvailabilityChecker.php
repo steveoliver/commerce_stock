@@ -69,13 +69,11 @@ class StockAvailabilityChecker implements AvailabilityCheckerInterface {
     // Get locations.
     $locations = $stock_config->getLocationList($variation_id);
 
-    // Check if always in stock.
-    if (!$stock_checker->getIsAlwaysInStock($variation_id)) {
-      // Check if quantity is available.
-      $stock_level = $stock_checker->getTotalStockLevel($variation_id, $locations);
-      return ($stock_level >= $quantity);
+    if ($stock_checker->getIsAlwaysInStock($entity)) {
+      return TRUE;
     }
-    return TRUE;
+    $stock_level = $stock_checker->getTotalStockLevel($variation_id, $locations);
+    return ($stock_level >= $quantity);
   }
 
 }

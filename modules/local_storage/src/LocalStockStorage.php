@@ -230,9 +230,8 @@ class LocalStockStorage implements StockCheckInterface, StockUpdateInterface {
   /**
    * {@inheritdoc}
    */
-  public function getIsAlwaysInStock($variation_id) {
-    // @todo - not yet implamanted.
-    return FALSE;
+  public function getIsAlwaysInStock($entity) {
+    return $entity->get('commerce_stock_always_in_stock') && $entity->get('commerce_stock_always_in_stock')->value == TRUE;
   }
 
   /**
