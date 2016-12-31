@@ -46,7 +46,7 @@ class CommerceStockKernelTest extends CommerceStockKernelTestBase {
     // This would throw an Exception, if the field isn't there.
     $field = $variation->get('commerce_stock_always_in_stock');
     // Check the default value is set to true;.
-    self::assertTrue($field->getValue());
+    self::assertTrue($field->getValue()[0]['value']);
   }
 
 }
