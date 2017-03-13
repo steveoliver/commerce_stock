@@ -162,13 +162,6 @@ class StockTransactions2 extends FormBase {
   /**
    * {@inheritdoc}
    */
-  public function validateForm(array &$form, FormStateInterface $form_state) {
-    parent::validateForm($form, $form_state);
-  }
-
-  /**
-   * {@inheritdoc}
-   */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $transaction_type = $form_state->getValue('transaction_type');
     $product_variation_id = $form_state->getValue('product_variation_id');
