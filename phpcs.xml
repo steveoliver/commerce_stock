@@ -28,6 +28,10 @@
   <rule ref="Drupal.Commenting.DocComment.ShortNotCapital">
     <severity>0</severity>
   </rule>
+  <!-- Complains about example code and placeholders for later overriding. -->
+  <rule ref="Generic.CodeAnalysis.UselessOverridingMethod.Found">
+    <severity>0</severity>
+  </rule>
   <!-- Complains a lot about tests which don't need short descriptions. -->
   <rule ref="Drupal.Commenting.DocComment.MissingShort">
     <severity>0</severity>
